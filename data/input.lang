@@ -1,6 +1,12 @@
 //comment
-create varOne with [1 2 3];
-varOne 1 = 2;
+create varOne with [1 2 3 4 5];
+create i with 0;
+create sum with 0;
+
+
+sum = sum + varOne i;
+i = i + 1;
+
 
 
 

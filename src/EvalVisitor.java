@@ -64,6 +64,18 @@ public class EvalVisitor extends LangBaseVisitor{
     }
 
     @Override
+    public Object visitAddToVarTheArray(LangParser.AddToVarTheArrayContext ctx) {
+        lineArray.add("LOADV" + " " + "$" + ctx.VARNAME(0));
+        lineArray.add("SETR" + " ");
+        lineArray.add("LOADV" + " " + "$" + ctx.VARNAME(1) + ctx.VALUE());
+        lineArray.add("MUXR" + " ");
+        lineArray.add("ADD" + " ");
+        lineArray.add("MUXOP" + " ");
+        lineArray.add("STORE" + " " + "$" + ctx.VARNAME(0));
+        return super.visitAddToVarTheArray(ctx);
+    }
+
+    @Override
     public Object visitExitStmt(LangParser.ExitStmtContext ctx) {
         lineArray.add("HALT");
         return super.visitExitStmt(ctx);

@@ -222,6 +222,28 @@ public class LangParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	public static class AddToVarTheArrayContext extends StmtContext {
+		public List<TerminalNode> VARNAME() { return getTokens(LangParser.VARNAME); }
+		public TerminalNode VARNAME(int i) {
+			return getToken(LangParser.VARNAME, i);
+		}
+		public TerminalNode EQ() { return getToken(LangParser.EQ, 0); }
+		public TerminalNode VALUE() { return getToken(LangParser.VALUE, 0); }
+		public AddToVarTheArrayContext(StmtContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof LangListener ) ((LangListener)listener).enterAddToVarTheArray(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof LangListener ) ((LangListener)listener).exitAddToVarTheArray(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LangVisitor ) return ((LangVisitor<? extends T>)visitor).visitAddToVarTheArray(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 	public static class CreateWithValueContext extends StmtContext {
 		public TerminalNode CREATE() { return getToken(LangParser.CREATE, 0); }
 		public TerminalNode VARNAME() { return getToken(LangParser.VARNAME, 0); }
@@ -355,7 +377,7 @@ public class LangParser extends Parser {
 		enterRule(_localctx, 4, RULE_stmt);
 		int _la;
 		try {
-			setState(54);
+			setState(58);
 			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				_localctx = new ExitStmtContext(_localctx);
@@ -496,6 +518,20 @@ public class LangParser extends Parser {
 				match(VALUE);
 				}
 				break;
+			case 8:
+				_localctx = new AddToVarTheArrayContext(_localctx);
+				enterOuterAlt(_localctx, 8);
+				{
+				setState(54);
+				match(VARNAME);
+				setState(55);
+				match(EQ);
+				setState(56);
+				match(VARNAME);
+				setState(57);
+				match(VALUE);
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -510,22 +546,23 @@ public class LangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\17;\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\17?\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\3\2\6\2\n\n\2\r\2\16\2\13\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3"+
 		"\4\3\4\3\4\3\4\3\4\3\4\6\4\34\n\4\r\4\16\4\35\3\4\3\4\3\4\3\4\3\4\3\4"+
 		"\3\4\3\4\3\4\5\4)\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
-		"\3\4\3\4\5\49\n\4\3\4\2\2\5\2\4\6\2\2@\2\t\3\2\2\2\4\r\3\2\2\2\68\3\2"+
-		"\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2\13\f\3\2\2\2\f"+
-		"\3\3\2\2\2\r\16\5\6\4\2\16\17\7\5\2\2\17\5\3\2\2\2\209\7\6\2\2\21\22\7"+
-		"\7\2\2\22\23\7\n\2\2\23\24\7\b\2\2\249\7\13\2\2\25\26\7\7\2\2\26\27\7"+
-		"\n\2\2\27\30\7\b\2\2\30\31\7\3\2\2\31\33\7\13\2\2\32\34\7\13\2\2\33\32"+
-		"\3\2\2\2\34\35\3\2\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36\37\3\2\2\2\379\7"+
-		"\4\2\2 !\7\n\2\2!(\7\t\2\2\"#\7\n\2\2#$\7\f\2\2$)\7\13\2\2%&\7\13\2\2"+
-		"&\'\7\f\2\2\')\7\n\2\2(\"\3\2\2\2(%\3\2\2\2)9\3\2\2\2*+\7\n\2\2+,\7\t"+
-		"\2\2,-\7\n\2\2-.\7\f\2\2.9\7\n\2\2/\60\7\n\2\2\60\61\7\t\2\2\61\62\7\13"+
-		"\2\2\62\63\7\f\2\2\639\7\13\2\2\64\65\7\n\2\2\65\66\7\13\2\2\66\67\7\t"+
-		"\2\2\679\7\13\2\28\20\3\2\2\28\21\3\2\2\28\25\3\2\2\28 \3\2\2\28*\3\2"+
-		"\2\28/\3\2\2\28\64\3\2\2\29\7\3\2\2\2\6\13\35(8";
+		"\3\4\3\4\3\4\3\4\3\4\3\4\5\4=\n\4\3\4\2\2\5\2\4\6\2\2E\2\t\3\2\2\2\4\r"+
+		"\3\2\2\2\6<\3\2\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2"+
+		"\13\f\3\2\2\2\f\3\3\2\2\2\r\16\5\6\4\2\16\17\7\5\2\2\17\5\3\2\2\2\20="+
+		"\7\6\2\2\21\22\7\7\2\2\22\23\7\n\2\2\23\24\7\b\2\2\24=\7\13\2\2\25\26"+
+		"\7\7\2\2\26\27\7\n\2\2\27\30\7\b\2\2\30\31\7\3\2\2\31\33\7\13\2\2\32\34"+
+		"\7\13\2\2\33\32\3\2\2\2\34\35\3\2\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36\37"+
+		"\3\2\2\2\37=\7\4\2\2 !\7\n\2\2!(\7\t\2\2\"#\7\n\2\2#$\7\f\2\2$)\7\13\2"+
+		"\2%&\7\13\2\2&\'\7\f\2\2\')\7\n\2\2(\"\3\2\2\2(%\3\2\2\2)=\3\2\2\2*+\7"+
+		"\n\2\2+,\7\t\2\2,-\7\n\2\2-.\7\f\2\2.=\7\n\2\2/\60\7\n\2\2\60\61\7\t\2"+
+		"\2\61\62\7\13\2\2\62\63\7\f\2\2\63=\7\13\2\2\64\65\7\n\2\2\65\66\7\13"+
+		"\2\2\66\67\7\t\2\2\67=\7\13\2\289\7\n\2\29:\7\t\2\2:;\7\n\2\2;=\7\13\2"+
+		"\2<\20\3\2\2\2<\21\3\2\2\2<\25\3\2\2\2< \3\2\2\2<*\3\2\2\2</\3\2\2\2<"+
+		"\64\3\2\2\2<8\3\2\2\2=\7\3\2\2\2\6\13\35(<";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

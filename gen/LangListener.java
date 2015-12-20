@@ -110,4 +110,16 @@ public interface LangListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAddToArrayElement(LangParser.AddToArrayElementContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code addToVarTheArray}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterAddToVarTheArray(LangParser.AddToVarTheArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code addToVarTheArray}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitAddToVarTheArray(LangParser.AddToVarTheArrayContext ctx);
 }

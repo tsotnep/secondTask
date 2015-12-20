@@ -118,6 +118,18 @@ public class LangBaseListener implements LangListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAddToArrayElement(LangParser.AddToArrayElementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAddToVarTheArray(LangParser.AddToVarTheArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAddToVarTheArray(LangParser.AddToVarTheArrayContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

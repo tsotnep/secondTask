@@ -70,4 +70,11 @@ public interface LangVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAddToArrayElement(LangParser.AddToArrayElementContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code addToVarTheArray}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAddToVarTheArray(LangParser.AddToVarTheArrayContext ctx);
 }

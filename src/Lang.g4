@@ -12,6 +12,7 @@ stmt:   EXIT                          # exitStmt
     |   VARNAME EQ VARNAME ADD VARNAME# assVarVar
     |   VARNAME EQ VALUE ADD VALUE    # assValVal
     |   VARNAME VALUE EQ VALUE        # addToArrayElement
+    |   VARNAME EQ VARNAME VALUE      # addToVarTheArray
     ;
 
 
