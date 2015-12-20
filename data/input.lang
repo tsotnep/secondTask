@@ -1,0 +1,14 @@
+//comment
+create varOne with 11;
+
+create varTwo with 0;
+
+varTwo = varOne + 5;
+
+varTwo = 1+1;
+
+create varThree with 0;
+
+varThree = varOne + varTwo;
+
+EXITPLEASE;
