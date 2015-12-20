@@ -51,18 +51,6 @@ public interface LangListener extends ParseTreeListener {
 	 */
 	void exitCreateWithValue(LangParser.CreateWithValueContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code performAdd}
-	 * labeled alternative in {@link LangParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterPerformAdd(LangParser.PerformAddContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code performAdd}
-	 * labeled alternative in {@link LangParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitPerformAdd(LangParser.PerformAddContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code assVarVal}
 	 * labeled alternative in {@link LangParser#stmt}.
 	 * @param ctx the parse tree

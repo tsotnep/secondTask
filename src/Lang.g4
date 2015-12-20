@@ -3,18 +3,16 @@ grammar Lang;
 //parser rules
 prog:  (line)+;
 
-line: stmt ENDLN; // semicolon is mandatory
+line: stmt ENDLN;
 
 stmt:   EXIT                          # exitStmt
     |   CREATE VARNAME WITH VALUE     # createWithValue
-    |   VARNAME ADD VARNAME           # performAdd
     |   VARNAME EQ ((VARNAME ADD VALUE) | (VALUE ADD VARNAME))  # assVarVal
     |   VARNAME EQ VARNAME ADD VARNAME# assVarVar
     |   VARNAME EQ VALUE ADD VALUE    # assValVal
     ;
 
 
-//lexical(token) rules
 ENDLN: ';';
 EXIT: 'EXITPLEASE';
 CREATE : 'create';

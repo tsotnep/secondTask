@@ -9,6 +9,14 @@ public class EvalVisitor extends LangBaseVisitor{
     public int createMemAddr = 0;
 
     @Override
+    public Object visitCreateWithValue(LangParser.CreateWithValueContext ctx) {
+        lineArray.add("$" + ctx.VARNAME() + " " + createMemAddr++);
+        lineArray.add("LOADN" + " " + ctx.VALUE());
+        lineArray.add("STORE" + " " + "$" + ctx.VARNAME());
+        return super.visitCreateWithValue(ctx);
+    }
+
+    @Override
     public Object visitAssVarVal(LangParser.AssVarValContext ctx) {
         lineArray.add("LOADV" + " " + "$" + ctx.VARNAME(1));
         lineArray.add("ADD" + " " + ctx.VALUE());
@@ -35,14 +43,6 @@ public class EvalVisitor extends LangBaseVisitor{
         lineArray.add("add" + " " + ctx.VALUE(1));
         lineArray.add("STORE" + " " + "$" + ctx.VARNAME());
         return super.visitAssValVal(ctx);
-    }
-
-    @Override
-    public Object visitCreateWithValue(LangParser.CreateWithValueContext ctx) {
-        lineArray.add("$" + ctx.VARNAME() + " " + createMemAddr++);
-        lineArray.add("LOADN" + " " + ctx.VALUE());
-        lineArray.add("STORE" + " " + "$" + ctx.VARNAME());
-        return super.visitCreateWithValue(ctx);
     }
 
     @Override

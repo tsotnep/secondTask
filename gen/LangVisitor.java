@@ -36,13 +36,6 @@ public interface LangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCreateWithValue(LangParser.CreateWithValueContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code performAdd}
-	 * labeled alternative in {@link LangParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPerformAdd(LangParser.PerformAddContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code assVarVal}
 	 * labeled alternative in {@link LangParser#stmt}.
 	 * @param ctx the parse tree

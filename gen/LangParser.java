@@ -219,27 +219,6 @@ public class LangParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
-	public static class PerformAddContext extends StmtContext {
-		public List<TerminalNode> VARNAME() { return getTokens(LangParser.VARNAME); }
-		public TerminalNode VARNAME(int i) {
-			return getToken(LangParser.VARNAME, i);
-		}
-		public TerminalNode ADD() { return getToken(LangParser.ADD, 0); }
-		public PerformAddContext(StmtContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof LangListener ) ((LangListener)listener).enterPerformAdd(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof LangListener ) ((LangListener)listener).exitPerformAdd(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LangVisitor ) return ((LangVisitor<? extends T>)visitor).visitPerformAdd(this);
-			else return visitor.visitChildren(this);
-		}
-	}
 	public static class AssVarValContext extends StmtContext {
 		public List<TerminalNode> VARNAME() { return getTokens(LangParser.VARNAME); }
 		public TerminalNode VARNAME(int i) {
@@ -330,7 +309,7 @@ public class LangParser extends Parser {
 		StmtContext _localctx = new StmtContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_stmt);
 		try {
-			setState(42);
+			setState(39);
 			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
 				_localctx = new ExitStmtContext(_localctx);
@@ -355,35 +334,23 @@ public class LangParser extends Parser {
 				}
 				break;
 			case 3:
-				_localctx = new PerformAddContext(_localctx);
+				_localctx = new AssVarValContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(19);
 				match(VARNAME);
 				setState(20);
-				match(ADD);
-				setState(21);
-				match(VARNAME);
-				}
-				break;
-			case 4:
-				_localctx = new AssVarValContext(_localctx);
-				enterOuterAlt(_localctx, 4);
-				{
-				setState(22);
-				match(VARNAME);
-				setState(23);
 				match(EQ);
-				setState(30);
+				setState(27);
 				switch (_input.LA(1)) {
 				case VARNAME:
 					{
 					{
-					setState(24);
+					setState(21);
 					match(VARNAME);
-					setState(25);
+					setState(22);
 					match(ADD);
-					setState(26);
+					setState(23);
 					match(VALUE);
 					}
 					}
@@ -391,11 +358,11 @@ public class LangParser extends Parser {
 				case VALUE:
 					{
 					{
-					setState(27);
+					setState(24);
 					match(VALUE);
-					setState(28);
+					setState(25);
 					match(ADD);
-					setState(29);
+					setState(26);
 					match(VARNAME);
 					}
 					}
@@ -405,35 +372,35 @@ public class LangParser extends Parser {
 				}
 				}
 				break;
-			case 5:
+			case 4:
 				_localctx = new AssVarVarContext(_localctx);
-				enterOuterAlt(_localctx, 5);
+				enterOuterAlt(_localctx, 4);
 				{
-				setState(32);
+				setState(29);
 				match(VARNAME);
-				setState(33);
+				setState(30);
 				match(EQ);
-				setState(34);
+				setState(31);
 				match(VARNAME);
-				setState(35);
+				setState(32);
 				match(ADD);
-				setState(36);
+				setState(33);
 				match(VARNAME);
 				}
 				break;
-			case 6:
+			case 5:
 				_localctx = new AssValValContext(_localctx);
-				enterOuterAlt(_localctx, 6);
+				enterOuterAlt(_localctx, 5);
 				{
-				setState(37);
+				setState(34);
 				match(VARNAME);
-				setState(38);
+				setState(35);
 				match(EQ);
-				setState(39);
+				setState(36);
 				match(VALUE);
-				setState(40);
+				setState(37);
 				match(ADD);
-				setState(41);
+				setState(38);
 				match(VALUE);
 				}
 				break;
@@ -451,19 +418,18 @@ public class LangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\r/\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\r,\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\3\2\6\2\n\n\2\r\2\16\2\13\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3"+
-		"\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4!\n\4\3\4\3\4\3\4\3\4\3"+
-		"\4\3\4\3\4\3\4\3\4\3\4\5\4-\n\4\3\4\2\2\5\2\4\6\2\2\62\2\t\3\2\2\2\4\r"+
-		"\3\2\2\2\6,\3\2\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2"+
-		"\13\f\3\2\2\2\f\3\3\2\2\2\r\16\5\6\4\2\16\17\7\3\2\2\17\5\3\2\2\2\20-"+
-		"\7\4\2\2\21\22\7\5\2\2\22\23\7\b\2\2\23\24\7\6\2\2\24-\7\t\2\2\25\26\7"+
-		"\b\2\2\26\27\7\n\2\2\27-\7\b\2\2\30\31\7\b\2\2\31 \7\7\2\2\32\33\7\b\2"+
-		"\2\33\34\7\n\2\2\34!\7\t\2\2\35\36\7\t\2\2\36\37\7\n\2\2\37!\7\b\2\2 "+
-		"\32\3\2\2\2 \35\3\2\2\2!-\3\2\2\2\"#\7\b\2\2#$\7\7\2\2$%\7\b\2\2%&\7\n"+
-		"\2\2&-\7\b\2\2\'(\7\b\2\2()\7\7\2\2)*\7\t\2\2*+\7\n\2\2+-\7\t\2\2,\20"+
-		"\3\2\2\2,\21\3\2\2\2,\25\3\2\2\2,\30\3\2\2\2,\"\3\2\2\2,\'\3\2\2\2-\7"+
-		"\3\2\2\2\5\13 ,";
+		"\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4\36\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
+		"\3\4\3\4\3\4\5\4*\n\4\3\4\2\2\5\2\4\6\2\2.\2\t\3\2\2\2\4\r\3\2\2\2\6)"+
+		"\3\2\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2\13\f\3\2\2"+
+		"\2\f\3\3\2\2\2\r\16\5\6\4\2\16\17\7\3\2\2\17\5\3\2\2\2\20*\7\4\2\2\21"+
+		"\22\7\5\2\2\22\23\7\b\2\2\23\24\7\6\2\2\24*\7\t\2\2\25\26\7\b\2\2\26\35"+
+		"\7\7\2\2\27\30\7\b\2\2\30\31\7\n\2\2\31\36\7\t\2\2\32\33\7\t\2\2\33\34"+
+		"\7\n\2\2\34\36\7\b\2\2\35\27\3\2\2\2\35\32\3\2\2\2\36*\3\2\2\2\37 \7\b"+
+		"\2\2 !\7\7\2\2!\"\7\b\2\2\"#\7\n\2\2#*\7\b\2\2$%\7\b\2\2%&\7\7\2\2&\'"+
+		"\7\t\2\2\'(\7\n\2\2(*\7\t\2\2)\20\3\2\2\2)\21\3\2\2\2)\25\3\2\2\2)\37"+
+		"\3\2\2\2)$\3\2\2\2*\7\3\2\2\2\5\13\35)";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

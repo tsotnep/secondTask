@@ -7,7 +7,6 @@ line: stmt ENDLN; // semicolon is mandatory
 
 stmt:   EXIT                          # exitStmt
     |   CREATE VARNAME WITH VALUE     # createWithValue
-    |   VARNAME ADD VARNAME           # performAdd
     |   VARNAME EQ ((VARNAME ADD VALUE) | (VALUE ADD VARNAME))  # assVarVal
     |   VARNAME EQ VARNAME ADD VARNAME# assVarVar
     |   VARNAME EQ VALUE ADD VALUE    # assValVal
