@@ -36,6 +36,13 @@ public interface LangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCreateWithValue(LangParser.CreateWithValueContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code createArray}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCreateArray(LangParser.CreateArrayContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code assVarVal}
 	 * labeled alternative in {@link LangParser#stmt}.
 	 * @param ctx the parse tree
@@ -56,4 +63,11 @@ public interface LangVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAssValVal(LangParser.AssValValContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code addToArrayElement}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAddToArrayElement(LangParser.AddToArrayElementContext ctx);
 }

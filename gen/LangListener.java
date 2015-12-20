@@ -51,6 +51,18 @@ public interface LangListener extends ParseTreeListener {
 	 */
 	void exitCreateWithValue(LangParser.CreateWithValueContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code createArray}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterCreateArray(LangParser.CreateArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code createArray}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitCreateArray(LangParser.CreateArrayContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code assVarVal}
 	 * labeled alternative in {@link LangParser#stmt}.
 	 * @param ctx the parse tree
@@ -86,4 +98,16 @@ public interface LangListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAssValVal(LangParser.AssValValContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code addToArrayElement}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterAddToArrayElement(LangParser.AddToArrayElementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code addToArrayElement}
+	 * labeled alternative in {@link LangParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitAddToArrayElement(LangParser.AddToArrayElementContext ctx);
 }

@@ -7,9 +7,11 @@ line: stmt ENDLN;
 
 stmt:   EXIT                          # exitStmt
     |   CREATE VARNAME WITH VALUE     # createWithValue
+    |   CREATE VARNAME WITH '[' VALUE VALUE+ ']'    #createArray
     |   VARNAME EQ ((VARNAME ADD VALUE) | (VALUE ADD VARNAME))  # assVarVal
     |   VARNAME EQ VARNAME ADD VARNAME# assVarVar
     |   VARNAME EQ VALUE ADD VALUE    # assValVal
+    |   VARNAME VALUE EQ VALUE        # addToArrayElement
     ;
 
 

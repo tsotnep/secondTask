@@ -2,27 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37c2c6b4-e53d-4444-80b4-ba00133e880b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$PerformAddContext.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/EvalVisitor.class" afterPath="$PROJECT_DIR$/out/production/secondTask/EvalVisitor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangBaseListener.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangBaseListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangBaseVisitor.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangBaseVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangLexer.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangLexer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangListener.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$AssValValContext.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser$AssValValContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$AssVarValContext.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser$AssVarValContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$AssVarVarContext.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser$AssVarVarContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$CreateWithValueContext.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser$CreateWithValueContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$ExitStmtContext.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser$ExitStmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser$LineContext.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser$LineContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangParser.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangVisitor.class" afterPath="$PROJECT_DIR$/out/production/secondTask/LangVisitor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvalVisitor.java" afterPath="$PROJECT_DIR$/src/EvalVisitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/Lang.g4" afterPath="$PROJECT_DIR$/out/production/secondTask/Lang.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lang.g4" afterPath="$PROJECT_DIR$/src/Lang.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/Lang.tokens" afterPath="$PROJECT_DIR$/gen/Lang.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/Lang.tokens" afterPath="$PROJECT_DIR$/out/production/secondTask/Lang.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangBaseListener.java" afterPath="$PROJECT_DIR$/gen/LangBaseListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangBaseVisitor.java" afterPath="$PROJECT_DIR$/gen/LangBaseVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangLexer.java" afterPath="$PROJECT_DIR$/gen/LangLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangLexer.tokens" afterPath="$PROJECT_DIR$/gen/LangLexer.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/secondTask/LangLexer.tokens" afterPath="$PROJECT_DIR$/out/production/secondTask/LangLexer.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangListener.java" afterPath="$PROJECT_DIR$/gen/LangListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangParser.java" afterPath="$PROJECT_DIR$/gen/LangParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangVisitor.java" afterPath="$PROJECT_DIR$/gen/LangVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/input.lang" afterPath="$PROJECT_DIR$/data/input.lang" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/output.asm" afterPath="$PROJECT_DIR$/data/output.asm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/output.bin" afterPath="$PROJECT_DIR$/data/output.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="secondTask.iws" />
@@ -51,16 +59,16 @@
     <favorites_list name="secondTask" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7606112">
+    <splitter split-orientation="horizontal" split-proportion="0.70823246">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.47813413">
+        <splitter split-orientation="horizontal" split-proportion="0.35418296">
           <split-first>
             <leaf>
               <file leaf-file-name="Lang.g4" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/Lang.g4">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.36666667">
-                      <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                    <state vertical-scroll-proportion="0.32300162">
+                      <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
                       <folding />
                     </state>
                   </provider>
@@ -73,15 +81,10 @@
               <file leaf-file-name="EvalVisitor.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/EvalVisitor.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.4">
-                      <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                    <state vertical-scroll-proportion="0.26590538">
+                      <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
                       <folding>
                         <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-                        <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-                        <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-                        <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-                        <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-                        <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
                       </folding>
                     </state>
                   </provider>
@@ -98,8 +101,8 @@
               <file leaf-file-name="input.lang" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/data/input.lang">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+                    <state vertical-scroll-proportion="0.05872757">
+                      <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
                       <folding />
                     </state>
                   </provider>
@@ -112,8 +115,8 @@
               <file leaf-file-name="output.asm" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/data/output.asm">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.56666666">
-                      <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+                    <state vertical-scroll-proportion="0.411093">
+                      <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
                       <folding />
                     </state>
                   </provider>
@@ -136,9 +139,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/output.asm" />
-        <option value="$PROJECT_DIR$/src/EvalVisitor.java" />
         <option value="$PROJECT_DIR$/src/Lang.g4" />
+        <option value="$PROJECT_DIR$/src/EvalVisitor.java" />
+        <option value="$PROJECT_DIR$/data/output.asm" />
         <option value="$PROJECT_DIR$/data/input.lang" />
       </list>
     </option>
@@ -543,12 +546,12 @@
       <workItem from="1450632590151" duration="558000" />
       <workItem from="1450634182654" duration="173000" />
       <workItem from="1450634422828" duration="149000" />
-      <workItem from="1450635644684" duration="2208000" />
+      <workItem from="1450635644684" duration="3426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29445000" />
+    <option name="totallyTimeSpent" value="30663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="28" width="1920" height="1018" extended-state="6" />
@@ -563,8 +566,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24384525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24384525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11752137" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -615,11 +618,6 @@
           <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -654,11 +652,6 @@
           <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -693,11 +686,6 @@
           <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -732,11 +720,6 @@
           <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -771,11 +754,6 @@
           <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,11 +788,6 @@
           <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -852,11 +825,6 @@
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -921,17 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/output.asm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56666666">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/instructions.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.72689074">
@@ -943,33 +900,39 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvalVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitCreateWithValue#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssVarVar#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitAssValVal#0;class#EvalVisitor#0" expanded="false" />
-            <element signature="method#visitExitStmt#0;class#EvalVisitor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Lang.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36666667">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.32300162">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvalVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26590538">
+          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+          <folding>
+            <element signature="docComment;class#EvalVisitor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/output.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.411093">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/input.lang">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.05872757">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>

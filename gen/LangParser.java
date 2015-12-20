@@ -16,8 +16,8 @@ public class LangParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		ENDLN=1, EXIT=2, CREATE=3, WITH=4, EQ=5, VARNAME=6, VALUE=7, ADD=8, COMMENT=9, 
-		MULTILINECOMMENT=10, EOL=11;
+		T__0=1, T__1=2, ENDLN=3, EXIT=4, CREATE=5, WITH=6, EQ=7, VARNAME=8, VALUE=9, 
+		ADD=10, COMMENT=11, MULTILINECOMMENT=12, EOL=13;
 	public static final int
 		RULE_prog = 0, RULE_line = 1, RULE_stmt = 2;
 	public static final String[] ruleNames = {
@@ -25,12 +25,12 @@ public class LangParser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "';'", "'EXITPLEASE'", "'create'", "'with'", "'='", null, null, 
-		"'+'"
+		null, "'['", "']'", "';'", "'EXITPLEASE'", "'create'", "'with'", "'='", 
+		null, null, "'+'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, "ENDLN", "EXIT", "CREATE", "WITH", "EQ", "VARNAME", "VALUE", "ADD", 
-		"COMMENT", "MULTILINECOMMENT", "EOL"
+		null, null, null, "ENDLN", "EXIT", "CREATE", "WITH", "EQ", "VARNAME", 
+		"VALUE", "ADD", "COMMENT", "MULTILINECOMMENT", "EOL"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -199,6 +199,29 @@ public class LangParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
+	public static class CreateArrayContext extends StmtContext {
+		public TerminalNode CREATE() { return getToken(LangParser.CREATE, 0); }
+		public TerminalNode VARNAME() { return getToken(LangParser.VARNAME, 0); }
+		public TerminalNode WITH() { return getToken(LangParser.WITH, 0); }
+		public List<TerminalNode> VALUE() { return getTokens(LangParser.VALUE); }
+		public TerminalNode VALUE(int i) {
+			return getToken(LangParser.VALUE, i);
+		}
+		public CreateArrayContext(StmtContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof LangListener ) ((LangListener)listener).enterCreateArray(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof LangListener ) ((LangListener)listener).exitCreateArray(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LangVisitor ) return ((LangVisitor<? extends T>)visitor).visitCreateArray(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 	public static class CreateWithValueContext extends StmtContext {
 		public TerminalNode CREATE() { return getToken(LangParser.CREATE, 0); }
 		public TerminalNode VARNAME() { return getToken(LangParser.VARNAME, 0); }
@@ -265,6 +288,28 @@ public class LangParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	public static class AddToArrayElementContext extends StmtContext {
+		public TerminalNode VARNAME() { return getToken(LangParser.VARNAME, 0); }
+		public List<TerminalNode> VALUE() { return getTokens(LangParser.VALUE); }
+		public TerminalNode VALUE(int i) {
+			return getToken(LangParser.VALUE, i);
+		}
+		public TerminalNode EQ() { return getToken(LangParser.EQ, 0); }
+		public AddToArrayElementContext(StmtContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof LangListener ) ((LangListener)listener).enterAddToArrayElement(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof LangListener ) ((LangListener)listener).exitAddToArrayElement(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LangVisitor ) return ((LangVisitor<? extends T>)visitor).visitAddToArrayElement(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 	public static class ExitStmtContext extends StmtContext {
 		public TerminalNode EXIT() { return getToken(LangParser.EXIT, 0); }
 		public ExitStmtContext(StmtContext ctx) { copyFrom(ctx); }
@@ -308,9 +353,10 @@ public class LangParser extends Parser {
 	public final StmtContext stmt() throws RecognitionException {
 		StmtContext _localctx = new StmtContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_stmt);
+		int _la;
 		try {
-			setState(39);
-			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
+			setState(54);
+			switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				_localctx = new ExitStmtContext(_localctx);
 				enterOuterAlt(_localctx, 1);
@@ -334,23 +380,55 @@ public class LangParser extends Parser {
 				}
 				break;
 			case 3:
-				_localctx = new AssVarValContext(_localctx);
+				_localctx = new CreateArrayContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(19);
-				match(VARNAME);
+				match(CREATE);
 				setState(20);
+				match(VARNAME);
+				setState(21);
+				match(WITH);
+				setState(22);
+				match(T__0);
+				setState(23);
+				match(VALUE);
+				setState(25); 
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				do {
+					{
+					{
+					setState(24);
+					match(VALUE);
+					}
+					}
+					setState(27); 
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				} while ( _la==VALUE );
+				setState(29);
+				match(T__1);
+				}
+				break;
+			case 4:
+				_localctx = new AssVarValContext(_localctx);
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(30);
+				match(VARNAME);
+				setState(31);
 				match(EQ);
-				setState(27);
+				setState(38);
 				switch (_input.LA(1)) {
 				case VARNAME:
 					{
 					{
-					setState(21);
+					setState(32);
 					match(VARNAME);
-					setState(22);
+					setState(33);
 					match(ADD);
-					setState(23);
+					setState(34);
 					match(VALUE);
 					}
 					}
@@ -358,11 +436,11 @@ public class LangParser extends Parser {
 				case VALUE:
 					{
 					{
-					setState(24);
+					setState(35);
 					match(VALUE);
-					setState(25);
+					setState(36);
 					match(ADD);
-					setState(26);
+					setState(37);
 					match(VARNAME);
 					}
 					}
@@ -372,35 +450,49 @@ public class LangParser extends Parser {
 				}
 				}
 				break;
-			case 4:
+			case 5:
 				_localctx = new AssVarVarContext(_localctx);
-				enterOuterAlt(_localctx, 4);
+				enterOuterAlt(_localctx, 5);
 				{
-				setState(29);
+				setState(40);
 				match(VARNAME);
-				setState(30);
+				setState(41);
 				match(EQ);
-				setState(31);
+				setState(42);
 				match(VARNAME);
-				setState(32);
+				setState(43);
 				match(ADD);
-				setState(33);
+				setState(44);
 				match(VARNAME);
 				}
 				break;
-			case 5:
+			case 6:
 				_localctx = new AssValValContext(_localctx);
-				enterOuterAlt(_localctx, 5);
+				enterOuterAlt(_localctx, 6);
 				{
-				setState(34);
+				setState(45);
 				match(VARNAME);
-				setState(35);
+				setState(46);
 				match(EQ);
-				setState(36);
+				setState(47);
 				match(VALUE);
-				setState(37);
+				setState(48);
 				match(ADD);
-				setState(38);
+				setState(49);
+				match(VALUE);
+				}
+				break;
+			case 7:
+				_localctx = new AddToArrayElementContext(_localctx);
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(50);
+				match(VARNAME);
+				setState(51);
+				match(VALUE);
+				setState(52);
+				match(EQ);
+				setState(53);
 				match(VALUE);
 				}
 				break;
@@ -418,18 +510,22 @@ public class LangParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\r,\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\17;\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\3\2\6\2\n\n\2\r\2\16\2\13\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3"+
-		"\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4\36\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
-		"\3\4\3\4\3\4\5\4*\n\4\3\4\2\2\5\2\4\6\2\2.\2\t\3\2\2\2\4\r\3\2\2\2\6)"+
-		"\3\2\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2\13\f\3\2\2"+
-		"\2\f\3\3\2\2\2\r\16\5\6\4\2\16\17\7\3\2\2\17\5\3\2\2\2\20*\7\4\2\2\21"+
-		"\22\7\5\2\2\22\23\7\b\2\2\23\24\7\6\2\2\24*\7\t\2\2\25\26\7\b\2\2\26\35"+
-		"\7\7\2\2\27\30\7\b\2\2\30\31\7\n\2\2\31\36\7\t\2\2\32\33\7\t\2\2\33\34"+
-		"\7\n\2\2\34\36\7\b\2\2\35\27\3\2\2\2\35\32\3\2\2\2\36*\3\2\2\2\37 \7\b"+
-		"\2\2 !\7\7\2\2!\"\7\b\2\2\"#\7\n\2\2#*\7\b\2\2$%\7\b\2\2%&\7\7\2\2&\'"+
-		"\7\t\2\2\'(\7\n\2\2(*\7\t\2\2)\20\3\2\2\2)\21\3\2\2\2)\25\3\2\2\2)\37"+
-		"\3\2\2\2)$\3\2\2\2*\7\3\2\2\2\5\13\35)";
+		"\4\3\4\3\4\3\4\3\4\3\4\6\4\34\n\4\r\4\16\4\35\3\4\3\4\3\4\3\4\3\4\3\4"+
+		"\3\4\3\4\3\4\5\4)\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
+		"\3\4\3\4\5\49\n\4\3\4\2\2\5\2\4\6\2\2@\2\t\3\2\2\2\4\r\3\2\2\2\68\3\2"+
+		"\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2\13\f\3\2\2\2\f"+
+		"\3\3\2\2\2\r\16\5\6\4\2\16\17\7\5\2\2\17\5\3\2\2\2\209\7\6\2\2\21\22\7"+
+		"\7\2\2\22\23\7\n\2\2\23\24\7\b\2\2\249\7\13\2\2\25\26\7\7\2\2\26\27\7"+
+		"\n\2\2\27\30\7\b\2\2\30\31\7\3\2\2\31\33\7\13\2\2\32\34\7\13\2\2\33\32"+
+		"\3\2\2\2\34\35\3\2\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36\37\3\2\2\2\379\7"+
+		"\4\2\2 !\7\n\2\2!(\7\t\2\2\"#\7\n\2\2#$\7\f\2\2$)\7\13\2\2%&\7\13\2\2"+
+		"&\'\7\f\2\2\')\7\n\2\2(\"\3\2\2\2(%\3\2\2\2)9\3\2\2\2*+\7\n\2\2+,\7\t"+
+		"\2\2,-\7\n\2\2-.\7\f\2\2.9\7\n\2\2/\60\7\n\2\2\60\61\7\t\2\2\61\62\7\13"+
+		"\2\2\62\63\7\f\2\2\639\7\13\2\2\64\65\7\n\2\2\65\66\7\13\2\2\66\67\7\t"+
+		"\2\2\679\7\13\2\28\20\3\2\2\28\21\3\2\2\28\25\3\2\2\28 \3\2\2\28*\3\2"+
+		"\2\28/\3\2\2\28\64\3\2\2\29\7\3\2\2\2\6\13\35(8";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

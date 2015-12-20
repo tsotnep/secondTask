@@ -1,14 +1,7 @@
 //comment
-create varOne with 11;
+create varOne with [1 2 3];
+varOne 1 = 2;
 
-create varTwo with 0;
 
-varTwo = varOne + 5;
-
-varTwo = 1+1;
-
-create varThree with 0;
-
-varThree = varOne + varTwo;
 
 EXITPLEASE;

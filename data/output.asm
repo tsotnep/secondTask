@@ -1,29 +1,16 @@
-$varOne 0
-LOADN 11
-STORE $varOne
-
-$varTwo 1
-LOADN 0
-STORE $varTwo
-
-LOADV $varOne
-ADD 5
-STORE $varTwo
-
+$varOne0 0
 LOADN 1
-add 1
-STORE $varTwo
+STORE $varOne0
 
-$varThree 2
-LOADN 0
-STORE $varThree
+$varOne1 1
+LOADN 2
+STORE $varOne1
 
-LOADV $varTwo
-SETR 
-LOADV $varOne
-MUXR 
-ADD 
-MUXOP 
-STORE $varThree
+$varOne2 2
+LOADN 3
+STORE $varOne2
 
+LOADV $varOne1
+ADD 2
+STORE $varOne1
 HALT
